@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ฮอร์โมนพืช (Plant Hormones) | ผังปฏิสัมพันธ์สรีรวิทยาของพืช</title>
+  
+  <!-- Google Fonts: Prompt & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================
+       CSS VARIABLES & THEME DEFINITIONS
+       ========================================== */
+    :root {
+      /* Light Theme Colors */
+      --bg-body: #f7f9f6;
+      --bg-card: #ffffff;
+      --bg-card-hover: #ffffff;
+      --bg-tag: #edf4ee;
+      --text-primary: #1b261e;
+      --text-secondary: #4a5d4f;
+      --text-muted: #788c7d;
+      --accent-green: #2e7d32;
+      --accent-green-hover: #236327;
+      --accent-soft: #e8f5e9;
+      --accent-light: #f1f8f3;
+      --border-color: #e2e9e3;
+      --border-subtle: #edf2ee;
+      --shadow-sm: 0 2px 8px rgba(27, 38, 30, 0.04);
+      --shadow-md: 0 10px 30px rgba(27, 38, 30, 0.07);
+      --shadow-lg: 0 20px 40px rgba(27, 38, 30, 0.1);
+      
+      /* Typography */
+      --font-th: 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-en: 'Plus Jakarta Sans', var(--font-th);
+      
+      /* Layout & Animation */
+      --max-width: 1120px;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-pill: 9999px;
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: 0.2s var(--ease-spring);
+      --transition-normal: 0.35s var(--ease-spring);
+      --transition-slow: 0.5s var(--ease-spring);
+    }
+
+    /* Dark Theme Colors */
+    @media (prefers-color-scheme: dark) {
+      :root[data-theme="auto"], :root[data-theme="dark"] {
+        --bg-body: #0d120f;
+        --bg-card: #151d18;
+        --bg-card-hover: #1c2620;
+        --bg-tag: #1c2a1f;
+        --text-primary: #e6eee8;
+        --text-secondary: #9cb1a2;
+        --text-muted: #64786a;
+        --accent-green: #4caf50;
+        --accent-green-hover: #66bb6a;
+        --accent-soft: #1d3324;
+        --accent-light: #233b2a;
+        --border-color: #223026;
+        --border-subtle: #19241c;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+        --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    /* Manual Overrides */
+    :root[data-theme="light"] {
+      --bg-body: #f7f9f6;
+      --bg-card: #ffffff;
+      --bg-card-hover: #ffffff;
+      --bg-tag: #edf4ee;
+      --text-primary: #1b261e;
+      --text-secondary: #4a5d4f;
+      --text-muted: #788c7d;
+      --accent-green: #2e7d32;
+      --accent-green-hover: #236327;
+      --accent-soft: #e8f5e9;
+      --accent-light: #f1f8f3;
+      --border-color: #e2e9e3;
+      --border-subtle: #edf2ee;
+      --shadow-sm: 0 2px 8px rgba(27, 38, 30, 0.04);
+      --shadow-md: 0 10px 30px rgba(27, 38, 30, 0.07);
+      --shadow-lg: 0 20px 40px rgba(27, 38, 30, 0.1);
+    }
+
+    :root[data-theme="dark"] {
+      --bg-body: #0d120f;
+      --bg-card: #151d18;
+      --bg-card-hover: #1c2620;
+      --bg-tag: #1c2a1f;
+      --text-primary: #e6eee8;
+      --text-secondary: #9cb1a2;
+      --text-muted: #64786a;
+      --accent-green: #4caf50;
+      --accent-green-hover: #66bb6a;
+      --accent-soft: #1d3324;
+      --accent-light: #233b2a;
+      --border-color: #223026;
+      --border-subtle: #19241c;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-th);
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color var(--transition-normal), color var(--transition-normal);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-green);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    .site-header {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: rgba(247, 249, 246, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background-color var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    [data-theme="dark"] .site-header {
+      background-color: rgba(13, 18, 15, 0.88);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] .site-header {
+        background-color: rgba(13, 18, 15, 0.88);
+      }
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-green);
+      transition: transform var(--transition-fast);
+    }
+
+    .brand:hover .brand-icon {
+      transform: rotate(-6deg) scale(1.06);
+    }
+
+    .brand-text-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .brand-text-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-en);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.5rem 0.95rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 500;
+      font-family: var(--font-th);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all var(--transition-fast);
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+      transform: scale(1.05);
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 2.5rem 0 5rem 0;
+      position: relative;
+    }
+
+    .view {
+      width: 100%;
+      transition: opacity 0.35s var(--ease-spring), transform 0.35s var(--ease-spring);
+    }
+
+    .view-hidden {
+      display: none !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .view-entering {
+      animation: viewSlideIn 0.38s var(--ease-spring) forwards;
+    }
+
+    .view-leaving {
+      animation: viewSlideOut 0.22s ease-in forwards;
+    }
+
+    @keyframes viewSlideIn {
+      from { opacity: 0; transform: translateY(16px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes viewSlideOut {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to { opacity: 0; transform: translateY(-12px) scale(0.985); }
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.95rem;
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* Interactive Plant Diagram Layout */
+    .plant-main-layout {
+      display: grid;
+      grid-template-columns: 4.5fr 7.5fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .plant-main-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .plant-svg-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .plant-svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+    }
+
+    .plant-hotspot {
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+    }
+
+    .plant-hotspot circle.pulse {
+      animation: hotspotPulse 2s infinite;
+    }
+
+    .plant-hotspot:hover circle.core, .plant-hotspot.active circle.core {
+      fill: var(--accent-green);
+      r: 10;
+    }
+
+    .plant-hotspot:hover text, .plant-hotspot.active text {
+      font-weight: 700;
+      fill: var(--accent-green);
+    }
+
+    @keyframes hotspotPulse {
+      0% { r: 6; opacity: 0.8; stroke-width: 2; }
+      100% { r: 22; opacity: 0; stroke-width: 1; }
+    }
+
+    .plant-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .part-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .part-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .part-desc {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+      font-weight: 300;
+    }
+
+    .part-hormones-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .hormone-quick-card {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: all var(--transition-fast);
+    }
+
+    .hormone-quick-card:hover {
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .hq-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .hq-tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.65rem;
+      background: var(--bg-tag);
+      color: var(--accent-green);
+      border-radius: var(--radius-pill);
+    }
+
+    .hq-role {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .deep-dive-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      background: var(--accent-green);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-th);
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .deep-dive-btn:hover {
+      background: var(--accent-green-hover);
+      transform: translateX(4px);
+    }
+
+    /* Hormone Grid View */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 500;
+      font-family: var(--font-th);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-chip:hover, .filter-chip.active {
+      background: var(--accent-green);
+      color: #ffffff;
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+    }
+
+    .hormone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .hormone-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal), 
+                  box-shadow var(--transition-normal), 
+                  border-color var(--transition-normal);
+    }
+
+    .hormone-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent-green);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+
+    .hormone-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-green);
+    }
+
+    .hormone-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform var(--transition-fast);
+    }
+
+    .hormone-card:hover .card-icon-wrapper {
+      transform: scale(1.08) rotate(-3deg);
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.65rem;
+      background: var(--bg-tag);
+      color: var(--accent-green);
+      border-radius: var(--radius-pill);
+    }
+
+    .card-title-group {
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title-th {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .card-title-en {
+      font-size: 0.85rem;
+      font-family: var(--font-en);
+      color: var(--accent-green);
+      font-weight: 600;
+      margin-top: 0.15rem;
+    }
+
+    .card-teaser {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    /* Detail View Components */
+    .detail-nav {
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: var(--font-th);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .back-btn:hover {
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+      transform: translateX(-4px);
+    }
+
+    .detail-header-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.25rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 640px) {
+      .detail-header-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .detail-icon-box {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .detail-icon-box svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .detail-title-th {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .detail-title-en {
+      font-size: 1.1rem;
+      font-family: var(--font-en);
+      color: var(--accent-green);
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    .detail-quick-summary {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .detail-sections-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+
+    .detail-section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .col-12 { grid-column: span 12; }
+    .col-6  { grid-column: span 6; }
+
+    @media (max-width: 880px) {
+      .col-6 { grid-column: span 12; }
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .info-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      margin-top: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .info-item-strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .tag-pill {
+      background: var(--bg-tag);
+      color: var(--accent-green);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Comparison Table View */
+    .table-wrapper {
+      overflow-x: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    .compare-table th, .compare-table td {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .compare-table th {
+      background: var(--accent-soft);
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .compare-table tr:hover {
+      background: var(--accent-light);
+    }
+
+    /* Interactive Quiz View */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      max-width: 680px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
+    }
+
+    .quiz-progress {
+      font-size: 0.85rem;
+      color: var(--accent-green);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .quiz-question {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-option-btn {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-th);
+      font-size: 0.95rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .quiz-option-btn:hover {
+      border-color: var(--accent-green);
+      background: var(--accent-soft);
+    }
+
+    .quiz-option-btn.correct {
+      background: #e8f5e9 !important;
+      border-color: #2e7d32 !important;
+      color: #1b5e20 !important;
+      font-weight: 600;
+    }
+
+    .quiz-option-btn.incorrect {
+      background: #ffebee !important;
+      border-color: #c62828 !important;
+      color: #b71c1c !important;
+    }
+
+    .quiz-feedback {
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .quiz-feedback.correct-bg {
+      background: var(--accent-soft);
+      color: var(--accent-green);
+    }
+
+    .quiz-feedback.incorrect-bg {
+      background: rgba(229, 115, 115, 0.15);
+      color: #d32f2f;
+    }
+
+    .quiz-next-btn {
+      background: var(--accent-green);
+      color: #ffffff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-th);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color var(--transition-fast);
+    }
+
+    .quiz-next-btn:hover {
+      background: var(--accent-green-hover);
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+  <header class="site-header">
+    <div class="container header-nav">
+      <div class="brand" onclick="navigateTo('home')" role="button" tabindex="0">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.12 2 9 0 4.97-4.03 9-9 9z"/>
+            <path d="M11 20v-5a2 2 0 0 1 2-2h4"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-text-title">ฮอร์โมนพืช</div>
+          <div class="brand-text-sub">Plant Hormones</div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="navHomeBtn" class="nav-btn active" onclick="navigateTo('home')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22v-8"/><path d="M12 14C12 14 8 11 4 12c0 6 5 10 8 10"/><path d="M12 14c0 0 4-3 8-2 0 6-5 10-8 10"/><circle cx="12" cy="4" r="2"/></svg>
+          ผังต้นไม้หลัก
+        </button>
+        <button id="navAllBtn" class="nav-btn" onclick="navigateTo('grid')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          การ์ดฮอร์โมนทั้งหมด
+        </button>
+        <button id="navCompareBtn" class="nav-btn" onclick="navigateTo('compare')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          ตารางเปรียบเทียบ
+        </button>
+        <button id="navQuizBtn" class="nav-btn" onclick="navigateTo('quiz')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          แบบทบทวน
+        </button>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="สลับโหมดมืด/สว่าง">
+          <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- 1. MAIN HOME VIEW: INTERACTIVE PLANT DIAGRAM -->
+      <section id="home-view" class="view view-active">
+        <div class="hero-section">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            สรีรวิทยาของพืช (Plant Physiology)
+          </div>
+          <h1 class="hero-title">ผังตำแหน่งฮอร์โมนบนต้นไม้</h1>
+          <p class="hero-subtitle">
+            กดเลือกบริเวณต่างๆ บนต้นไม้ เพื่อดูสรุปฮอร์โมนที่ทำงาน ณ จุดนั้น 
+            และกดปุ่มเพื่อเข้าไปอ่าน <strong>"ข้อมูลเจาะลึก"</strong> ของฮอร์โมนแต่ละชนิด
+          </p>
+        </div>
+
+        <div class="plant-main-layout">
+          <!-- Interactive Vector Plant Diagram -->
+          <div class="plant-svg-card">
+            <svg class="plant-svg" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Soil Line & Ground -->
+              <rect x="20" y="360" width="360" height="100" rx="10" fill="#2d221a" opacity="0.15"/>
+              <line x1="30" y1="360" x2="370" y2="360" stroke="#795548" stroke-width="3" stroke-dasharray="6 4"/>
+
+              <!-- Main Stem / Trunk -->
+              <path d="M200 360 Q195 240 200 100" stroke="#4ea355" stroke-width="14" stroke-linecap="round"/>
+              <path d="M200 360 Q195 240 200 100" stroke="#2e7d32" stroke-width="6" stroke-linecap="round"/>
+
+              <!-- Branches -->
+              <path d="M198 260 Q140 230 110 200" stroke="#4ea355" stroke-width="8" stroke-linecap="round"/>
+              <path d="M202 210 Q260 180 290 150" stroke="#4ea355" stroke-width="8" stroke-linecap="round"/>
+              <path d="M199 150 Q150 120 120 90" stroke="#4ea355" stroke-width="6" stroke-linecap="round"/>
+
+              <!-- Leaves -->
+              <path d="M120 90 C90 70 70 90 90 120 C110 110 125 100 120 90Z" fill="#66bb6a"/>
+              <path d="M110 200 C70 180 50 210 80 240 C100 230 115 210 110 200Z" fill="#4caf50"/>
+              <path d="M290 150 C330 130 350 160 320 190 C300 180 285 160 290 150Z" fill="#4caf50"/>
+
+              <!-- Fruit -->
+              <circle cx="280" cy="220" r="18" fill="#e53935"/>
+              <path d="M280 202 Q285 195 288 190" stroke="#5d4037" stroke-width="3"/>
+              <path d="M285 192 C292 190 295 196 290 200Z" fill="#4caf50"/>
+
+              <!-- Root System -->
+              <path d="M200 360 Q180 400 150 440" stroke="#8d6e63" stroke-width="7" stroke-linecap="round"/>
+              <path d="M200 360 Q220 410 250 450" stroke="#8d6e63" stroke-width="7" stroke-linecap="round"/>
+              <path d="M200 360 Q200 420 200 465" stroke="#8d6e63" stroke-width="5" stroke-linecap="round"/>
+              <path d="M175 400 Q140 410 120 420" stroke="#a1887f" stroke-width="4" stroke-linecap="round"/>
+              <path d="M215 410 Q245 425 270 435" stroke="#a1887f" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- HOTSPOT 1: SHOOT TIP -->
+              <g class="plant-hotspot active" id="hs-shoot" onclick="selectPlantPart('shoot')">
+                <circle class="pulse" cx="200" cy="95" r="14" fill="#2e7d32"/>
+                <circle class="core" cx="200" cy="95" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
+                <text x="220" y="90" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">1. ปลายยอด (Shoot Tip)</text>
+              </g>
+
+              <!-- HOTSPOT 2: LEAVES -->
+              <g class="plant-hotspot" id="hs-leaves" onclick="selectPlantPart('leaves')">
+                <circle class="pulse" cx="100" cy="210" r="14" fill="#2e7d32"/>
+                <circle class="core" cx="100" cy="210" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
+                <text x="15" y="250" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">2. ใบและปากใบ</text>
+              </g>
+
+              <!-- HOTSPOT 3: STEM -->
+              <g class="plant-hotspot" id="hs-stem" onclick="selectPlantPart('stem')">
+                <circle class="pulse" cx="200" cy="270" r="14" fill="#2e7d32"/>
+                <circle class="core" cx="200" cy="270" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
+                <text x="218" y="275" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">3. ลำต้น & ข้อปล้อง</text>
+              </g>
+
+              <!-- HOTSPOT 4: FRUIT -->
+              <g class="plant-hotspot" id="hs-fruit" onclick="selectPlantPart('fruit')">
+                <circle class="pulse" cx="280" cy="220" r="14" fill="#e53935"/>
+                <circle class="core" cx="280" cy="220" r="7" fill="#ef5350" stroke="#ffffff" stroke-width="2"/>
+                <text x="305" y="225" fill="#d32f2f" font-size="14" font-weight="600" font-family="Prompt">4. ดอกและผล</text>
+              </g>
+
+              <!-- HOTSPOT 5: ROOTS -->
+              <g class="plant-hotspot" id="hs-roots" onclick="selectPlantPart('roots')">
+                <circle class="pulse" cx="200" cy="420" r="14" fill="#795548"/>
+                <circle class="core" cx="200" cy="420" r="7" fill="#bcaaa4" stroke="#ffffff" stroke-width="2"/>
+                <text x="220" y="425" fill="#5d4037" font-size="14" font-weight="600" font-family="Prompt">5. ปลายราก (Root Tip)</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Dynamic Overview & Deep-Dive Trigger Panel -->
+          <div id="partInfoPanel" class="plant-info-card">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ALL HORMONES GRID VIEW -->
+      <section id="grid-view" class="view view-hidden">
+        <div class="hero-section" style="margin-bottom: 2rem;">
+          <h2 class="hero-title" style="font-size: 2rem;">สารควบคุมการเจริญเติบโตของพืชทั้ง 5 ชนิด</h2>
+          <p class="hero-subtitle">เลือกการ์ดฮอร์โมนพืชด้านล่างเพื่อเข้าสู่หน้ารายละเอียดเจาะลึก</p>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter-chip active" onclick="filterCards('all', this)">ทั้งหมด (5)</button>
+          <button class="filter-chip" onclick="filterCards('promoter', this)">กระตุ้นการเจริญเติบโต (3)</button>
+          <button class="filter-chip" onclick="filterCards('inhibitor', this)">ยับยั้ง/ตอบสนองความเครียด (2)</button>
+        </div>
+
+        <div id="hormoneGrid" class="hormone-grid"></div>
+      </section>
+
+      <!-- 3. DEEP-DIVE DETAIL VIEW -->
+      <section id="detail-view" class="view view-hidden">
+        <nav class="detail-nav">
+          <button class="back-btn" onclick="navigateTo('home')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            ย้อนกลับไปหน้าผังต้นไม้
+          </button>
+        </nav>
+
+        <div id="detailHeaderCard" class="detail-header-card"></div>
+
+        <div class="detail-sections-grid">
+          <div class="detail-section-card col-12">
+            <div class="section-head">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/><path d="M12 12v10"/></svg>
+              </div>
+              <h2 class="section-title">แหล่งที่สร้างฮอร์โมนในพืช (Sites of Production)</h2>
+            </div>
+            <div id="productionTags" class="tag-container"></div>
+          </div>
+
+          <div class="detail-section-card col-6">
+            <div class="section-head">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h2 class="section-title">หน้าที่และบทบาททางสรีรวิทยาเจาะลึก</h2>
+            </div>
+            <ul id="rolesList" class="info-list"></ul>
+          </div>
+
+          <div class="detail-section-card col-6">
+            <div class="section-head">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h2 class="section-title">ตัวอย่างการใช้ประโยชน์ทางการเกษตร</h2>
+            </div>
+            <ul id="agricultureList" class="info-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. COMPARISON VIEW -->
+      <section id="compare-view" class="view view-hidden">
+        <nav class="detail-nav">
+          <button class="back-btn" onclick="navigateTo('home')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            กลับหน้าผังหลัก
+          </button>
+        </nav>
+        <div class="hero-section" style="margin-bottom: 2rem;">
+          <h2 class="hero-title" style="font-size: 2rem;">ตารางเปรียบเทียบฮอร์โมนพืชทั้ง 5 ชนิด</h2>
+          <p class="hero-subtitle">สรุปความแตกต่างของหน้าที่ทางสรีรวิทยาหลักและประโยชน์ทางการเกษตร</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>ชื่อฮอร์โมน</th>
+                <th>กลุ่ม</th>
+                <th>แหล่งสังเคราะห์หลัก</th>
+                <th>หน้าที่หลักทางสรีรวิทยา</th>
+                <th>การนำไปใช้ประโยชน์</th>
+              </tr>
+            </thead>
+            <tbody id="compareTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. QUIZ VIEW -->
+      <section id="quiz-view" class="view view-hidden">
+        <nav class="detail-nav">
+          <button class="back-btn" onclick="navigateTo('home')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            กลับหน้าผังหลัก
+          </button>
+        </nav>
+        <div id="quizContainer" class="quiz-card"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Plant Hormones Minimal Interactive Guide • ออกแบบด้วยความใส่ใจเพื่อการเรียนรู้สรีรวิทยาพืช</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
+  <script>
+    const hormonesData = [
+      {
+        id: "auxin",
+        type: "promoter",
+        typeTh: "กระตุ้นการเจริญเติบโต",
+        nameTh: "ออกซิน",
+        nameEn: "Auxin",
+        teaser: "ควบคุมการยืดขยายเซลล์ ยับยั้งการเจริญของตาข้าง และตอบสนองต่อทิศทางแสง",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8"/><path d="M12 8C12 8 8 5 4 6c0 6 5 10 8 10"/><path d="M12 8c0 0 4-3 8-2 0 6-5 10-8 10"/><circle cx="12" cy="4" r="2"/></svg>`,
+        productionSites: [
+          "เนื้อเยื่อเจริญปลายยอด (Apical Meristem)",
+          "ใบอ่อนที่กำลังเจริญเติบโต",
+          "เอ็มบริโอในเมล็ดที่กำลังงอก"
+        ],
+        roles: [
+          { title: "กระตุ้นการยืดตัวของเซลล์ (Cell Elongation)", desc: "ส่งเสริมการขยายตัวของผนังเซลล์บริเวณลำต้นและราก ทำให้ส่วนยอดเจริญสูงขึ้น" },
+          { title: "การข่มของตาปลายยอด (Apical Dominance)", desc: "ยับยั้งการเจริญเติบโตของตาข้าง เพื่อให้พืชทุ่มพลังงานเจริญเติบโตในแนวตั้งก่อน" },
+          { title: "การเบนเข้าหาแสง (Phototropism)", desc: "ออกซินจะเคลื่อนที่ไปด้านตรงข้ามแสง ทำให้เซลล์ด้านนั้นยืดตัวยาวกว่า ลำต้นจึงเบนเข้าหาแสง" },
+          { title: "กระตุ้นการเกิดราก", desc: "ส่งเสริมการเกิดรากแขนง (Lateral roots) และรากพิเศษ (Adventitious roots)" }
+        ],
+        agricultureUses: [
+          { title: "การเร่งออกรากกิ่งปักชำ", desc: "ใช้สารสังเคราะห์ เช่น IBA และ NAA ทาหรือแช่โคนกิ่งปักชำเพื่อเร่งการสร้างรากใหม่" },
+          { title: "ป้องกันผลร่วงก่อนเก็บเกี่ยว", desc: "ฉีดพ่นในสวนไม้ผล เช่น ส้ม มะม่วง เพื่อยับยั้งการสร้างรอยหลุดร่วงของขั้วผล" },
+          { title: "ปราบวัชพืชใบเลี้ยงคู่", desc: "สาร 2,4-D ในความเข้มข้นสูงใช้เป็นสารกำจัดวัชพืชใบเลี้ยงคู่ในนาข้าวโดยไม่ทำลายข้าว" }
+        ]
+      },
+      {
+        id: "gibberellin",
+        type: "promoter",
+        typeTh: "กระตุ้นการเจริญเติบโต",
+        nameTh: "จิบเบอเรลลิน",
+        nameEn: "Gibberellin (GA)",
+        teaser: "กระตุ้นการยืดตัวของข้อลำต้น การงอกของเมล็ด และสลายการพักตัวของพืช",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M12 6l4-4"/><path d="M12 18l4 4"/></svg>`,
+        productionSites: [
+          "เนื้อเยื่อเจริญปลายยอดและปลายราก",
+          "ใบอ่อนและอับเรณู",
+          "คลอโรพลาสต์",
+          "เอ็มบริโอและเมล็ดที่กำลังพัฒนา"
+        ],
+        roles: [
+          { title: "กระตุ้นการยืดข้อลำต้น (Bolting)", desc: "ทำให้เซลล์บริเวณข้อและปล้องยืดตัวยาวขึ้น ลำต้นสูงและยืดขยายอย่างรวดเร็ว" },
+          { title: "สลายการพักตัวของเมล็ดและตา", desc: "กระตุ้นการงอกของเมล็ด โดยการสร้างเอนไซม์ α-amylase ย่อยแป้งเป็นน้ำตาลเพื่อเป็นอาหารเอ็มบริโอ" },
+          { title: "ติดผลโดยไม่ปฏิสนธิ (Parthenocarpy)", desc: "กระตุ้นให้รังไข่เจริญเป็นผลโดยไม่ต้องมีการปฏิสนธิ ทำให้ได้ผลไม้ไร้เมล็ด" },
+          { title: "เปลี่ยนเพศดอก", desc: "เปลี่ยนเพศของดอกในพืชบางชนิด เช่น กระตุ้นให้เกิดดอกตัวผู้ในตระกูลแตง" }
+        ],
+        agricultureUses: [
+          { title: "เพิ่มขนาดและขยายช่อองุ่น", desc: "ฉีดพ่นองุ่นไร้เมล็ด ช่วยให้ยืดช่อองุ่นให้โปร่ง ขั้วผลยาว และผลองุ่นมีขนาดใหญ่ขึ้นอย่างชัดเจน" },
+          { title: "เร่งความยาวลำต้นอ้อย", desc: "ใช้ฉีดพ่นต้นอ้อยเพื่อเร่งการยืดตัวของข้อปล้อง ทำให้ได้น้ำหนักและปริมาณน้ำตาลเพิ่มขึ้น" },
+          { title: "สลายการพักตัวของเมล็ดพันธุ์", desc: "ใช้แช่เมล็ดพืชหรือหัวมันฝรั่งเพื่อเร่งการแตกตาและงอกสม่ำเสมอพร้อมกัน" }
+        ]
+      },
+      {
+        id: "cytokinin",
+        type: "promoter",
+        typeTh: "กระตุ้นการเจริญเติบโต",
+        nameTh: "ไซโทไคนิน",
+        nameEn: "Cytokinin",
+        teaser: "กระตุ้นการแบ่งเซลล์ ชะลอความชราของใบ และส่งเสริมการเจริญของตาข้าง",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>`,
+        productionSites: [
+          "เนื้อเยื่อเจริญปลายราก (Root Tip)",
+          "ผลอ่อนที่กำลังเจริญเติบโต",
+          "เมล็ดที่กำลังงอก"
+        ],
+        roles: [
+          { title: "กระตุ้นการแบ่งเซลล์ (Cytokinesis)", desc: "ทำงานร่วมกับออกซินในการเร่งการแบ่งเซลล์และการเจริญของเนื้อเยื่อพืช" },
+          { title: "ส่งเสริมการเกิดตาข้าง", desc: "ต้านทานการข่มของตาปลายยอด กระตุ้นให้ตาข้างเจริญออกมาเป็นกิ่งก้านใหม่" },
+          { title: "ชะลอความชราภาพ (Delay Senescence)", desc: "ยับยั้งการสลายตัวของคลอโรฟิลล์และโปรตีน ทำให้ใบและเนื้อเยื่อพืชคงความสดได้ยาวนาน" },
+          { title: "การพัฒนาของคลอโรพลาสต์", desc: "ส่งเสริมการสังเคราะห์คลอโรฟิลล์และการเปลี่ยนพลาสติดเป็นคลอโรพลาสต์" }
+        ],
+        agricultureUses: [
+          { title: "เพาะเลี้ยงเนื้อเยื่อพืช (Tissue Culture)", desc: "ผสมในอาหารเลี้ยงเชื้อด้วยสัดส่วนไซโทไคนินสูงกว่าออกซิน เพื่อกระตุ้นการสร้างยอดและต้นใหม่" },
+          { title: "ยืดอายุผักสดและไม้ดอก", desc: "ฉีดพ่นรักษาความสดชื่นของผักใบและไม้ดอกตัดดอก เพื่อชะลอการเหลืองของใบ" },
+          { title: "กระตุ้นการแตกกิ่งก้านไม้ผล", desc: "ใช้ฉีดพ่นตาพืชเพื่อกระตุ้นให้แตกกิ่งข้างเพิ่มขึ้นในทรงพุ่มไม้ผล" }
+        ]
+      },
+      {
+        id: "abscisic-acid",
+        type: "inhibitor",
+        typeTh: "ยับยั้ง/ตอบสนองความเครียด",
+        nameTh: "กรดแอบไซซิก",
+        nameEn: "Abscisic Acid (ABA)",
+        teaser: "ตอบสนองต่อสภาวะเครียด ควบคุมการปิดปากใบ และกระตุ้นการพักตัวของเมล็ด",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>`,
+        productionSites: [
+          "ใบแก่และเนื้อเยื่อท่อลำเลียง",
+          "รากพืช (โดยเฉพาะเมื่อขาดน้ำ)",
+          "หมวกราก (Root Cap)",
+          "เมล็ดและผลแก่"
+        ],
+        roles: [
+          { title: "สั่งปิดปากใบ (Stomatal Closure)", desc: "เมื่อรากสัมผัสสภาวะขาดน้ำ จะส่ง ABA ไปที่ใบเพื่อสั่งให้เซลล์คุมปิดปากใบ ลดการสูญเสียน้ำ" },
+          { title: "ส่งเสริมการพักตัวของเมล็ด (Seed Dormancy)", desc: "ยับยั้งการงอกของเมล็ดจนกว่าจะได้รับน้ำและสภาพแวดล้อมที่เหมาะสม" },
+          { title: "ตอบสนองต่อสภาวะเครียด (Stress Response)", desc: "ช่วยพืชทนทานต่อสภาวะแห้งแล้ง ความเค็มสูง และอากาศหนาวจัด" },
+          { title: "ยับยั้งการเจริญเติบโต", desc: "ชะลอการยืดตัวของลำต้นและรากเมื่ออยู่ในสภาวะที่ไม่เหมาะสม" }
+        ],
+        agricultureUses: [
+          { title: "ลดการคายน้ำระหว่างย้ายปลูก", desc: "ฉีดพ่นพืชพันธุ์ก่อนทำการย้ายปลูกหรือขนส่ง เพื่อลดอัตราการเหี่ยวเฉา" },
+          { title: "ป้องกันการงอกก่อนเก็บเกี่ยว", desc: "รักษาการพักตัวของเมล็ดพันธุ์ข้าวและธัญพืช ไม่ให้งอกคาต้นเมื่อฝนตกช่วงเก็บเกี่ยว" },
+          { title: "เพิ่มความทนทานต่อภัยแล้ง", desc: "ใช้เป็นสารปรับปรุงความทนทานของพืชต่อสภาวะขาดน้ำในพื้นที่แห้งแล้ง" }
+        ]
+      },
+      {
+        id: "ethylene",
+        type: "inhibitor",
+        typeTh: "ยับยั้ง/ตอบสนองความเครียด",
+        nameTh: "เอทิลีน",
+        nameEn: "Ethylene",
+        teaser: "เร่งการสุกของผลไม้ กระตุ้นการร่วงของใบ และตอบสนองต่อบาดแผลพืช",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0 0 18 9 9 0 0 0 0-18z"/><path d="M8 12h8"/><path d="M12 8v8"/><circle cx="12" cy="12" r="3"/></svg>`,
+        productionSites: [
+          "ผลไม้ในระยะกำลังสุก",
+          "เนื้อเยื่อที่ชราภาพ (Senescent tissues)",
+          "เนื้อเยื่อที่ได้รับบาดเจ็บหรือเกิดความเครียด"
+        ],
+        roles: [
+          { title: "เร่งการสุกของผลไม้ (Fruit Ripening)", desc: "กระตุ้นการเปลี่ยนแป้งเป็นน้ำตาล สลายคลอโรฟิลล์ และทำให้เนื้อผลไม้นิ่มลง" },
+          { title: "กระตุ้นการหลุดร่วง (Abscission)", desc: "กระตุ้นการสร้างชั้นรอยหลุดร่วง (Abscission zone) บริเวณขั้วใบ ดอก และผล" },
+          { title: "การตอบสนองต่อบาดแผล", desc: "พืชจะหลั่งเอทิลีนสูงเมื่อถูกแมลงกัดกินหรือได้รับบาดเจ็บ เพื่อกระตุ้นระบบซ่อมแซม" },
+          { title: "กระตุ้นการออกดอกพืชบางชนิด", desc: "สามารถกระตุ้นการออกดอกและการเพศดอกในพืชวงศ์สับปะรด (Bromeliaceae)" }
+        ],
+        agricultureUses: [
+          { title: "การบ่มผลไม้ให้สุกสม่ำเสมอ", desc: "ใช้ก๊าซเอทิลีนหรือสารเอทีฟอน (Ethephon) บ่มกล้วย มะม่วง ทุเรียน มะเขือเทศ ให้สุกพร้อมกัน" },
+          { title: "บังคับออกดอกสับปะรด", desc: "ใช้สารเอทีฟอนฉีดพ่นต้นสับปะรดเพื่อบังคับให้ออกดอกพร้อมกันทั้งไร่ ทำให้วางแผนเก็บเกี่ยวได้ดี" },
+          { title: "เร่งการสลัดใบและผล", desc: "ใช้เร่งการร่วงของใบหรือผลเพื่อความสะดวกในการใช้เครื่องจักรรวบรวมผลผลิต" }
+        ]
+      }
+    ];
+
+    const plantPartsData = {
+      shoot: {
+        title: "🌱 ปลายยอดพืช (Apical Shoot Tip)",
+        subtitle: "เนื้อเยื่อเจริญปลายยอด เป็นศูนย์กลางการสังเคราะห์ฮอร์โมนที่ส่งผลต่อทิศทางและโครงสร้างต้นพืช",
+        hormones: [
+          {
+            id: "auxin",
+            name: "ออกซิน (Auxin)",
+            role: "สังเคราะห์หลักที่ปลายยอด คอนโทรลการยืดตัวของเซลล์ส่วนยอด ควบคุมการเบนเข้าหาแสง (Phototropism) และยับยั้งการเจริญของตาข้าง (Apical Dominance)"
+          },
+          {
+            id: "gibberellin",
+            name: "จิบเบอเรลลิน (Gibberellin)",
+            role: "สังเคราะห์ที่เนื้อเยื่อเจริญปลายยอด เร่งการยืดข้อปล้องให้ลำต้นเจริญสูงขึ้นในแนวตั้ง"
+          }
+        ]
+      },
+      leaves: {
+        title: "🍃 ใบและปากใบ (Leaves & Stomata)",
+        subtitle: "ใบเป็นอวัยวะสังเคราะห์แสงและคายน้ำ ควบคุมการตอบสนองต่อสภาวะเครียดและการคงความชุ่มชื้น",
+        hormones: [
+          {
+            id: "abscisic-acid",
+            name: "กรดแอบไซซิก (Abscisic Acid / ABA)",
+            role: "เมื่อพืชประสบภาวะขาดน้ำ ABA จะเข้มข้นขึ้นที่ใบ เพื่อสั่งให้เซลล์คุม (Guard cells) ปิดปากใบเพื่อลดการคายน้ำทันที"
+          },
+          {
+            id: "cytokinin",
+            name: "ไซโทไคนิน (Cytokinin)",
+            role: "ช่วยชะลอความชราภาพของใบ (Delay Senescence) ยับยั้งการสลายตัวของคลอโรฟิลล์ ทำให้ใบเขียวสดนานขึ้น"
+          }
+        ]
+      },
+      stem: {
+        title: "🪵 ลำต้นและข้อปล้อง (Stem & Internodes)",
+        subtitle: "ลำต้นทำหน้าที่ลำเลียงน้ำ สารอาหาร และยืดตัวเพื่อชูใบรับแสงแดด",
+        hormones: [
+          {
+            id: "gibberellin",
+            name: "จิบเบอเรลลิน (Gibberellin)",
+            role: "ออกฤทธิ์โดยตรงบริเวณข้อและปล้อง เร่งการแบ่งเซลล์และการขยายตัวตามยาว ทำให้ปล้องอ้อย ขั้วช่อองุ่น หรือลำต้นยืดยาวขึ้น"
+          },
+          {
+            id: "auxin",
+            name: "ออกซิน (Auxin)",
+            role: "ลำเลียงลงมาจากปลายยอดตามท่อลำเลียง เพื่อส่งเสริมการขยายขนาดของลำต้น"
+          }
+        ]
+      },
+      fruit: {
+        title: "🍎 ดอกและผลพืช (Flowers & Fruits)",
+        subtitle: "อวัยวะสืบพันธุ์และการสะสมอาหารของพืช ซึ่งมีการเปลี่ยนแปลงทางชีวเคมีอย่างรวดเร็ว",
+        hormones: [
+          {
+            id: "ethylene",
+            name: "เอทิลีน (Ethylene)",
+            role: "ถูกสร้างขึ้นในผลไม้ระยะสุก เร่งการเปลี่ยนแป้งเป็นน้ำตาล ทำให้เนื้อนิ่ม สลายคลอโรฟิลล์ และกระตุ้นการสลัดขั้วผล/กลีบดอก"
+          },
+          {
+            id: "auxin",
+            name: "ออกซิน (Auxin)",
+            role: "กระตุ้นการเจริญของรังไข่กลายเป็นผล ป้องกันผลหลุดร่วงก่อนเก็บเกี่ยว"
+          },
+          {
+            id: "gibberellin",
+            name: "จิบเบอเรลลิน (Gibberellin)",
+            role: "กระตุ้นให้รังไข่เจริญเป็นผลโดยไม่ต้องปฏิสนธิ (ผลไม้ไร้เมล็ด)"
+          }
+        ]
+      },
+      roots: {
+        title: "🪴 ปลายรากและระบบราก (Root Tip & System)",
+        subtitle: "รากทำหน้าที่ดูดซับน้ำ สารอาหาร และยึดเกาะดิน เป็นแหล่งสังเคราะห์ฮอร์โมนสำคัญส่งไปยังส่วนยอด",
+        hormones: [
+          {
+            id: "cytokinin",
+            name: "ไซโทไคนิน (Cytokinin)",
+            role: "สังเคราะห์หลักที่เนื้อเยื่อเจริญปลายราก (Root Tip) แล้วลำเลียงขึ้นไปทางท่อไซเลม เพื่อกระตุ้นการแบ่งเซลล์และสร้างตาข้างส่วนบน"
+          },
+          {
+            id: "auxin",
+            name: "ออกซิน (Auxin)",
+            role: "เคลื่อนที่ลงมาสะสมบริเวณราก เพื่อกระตุ้นการเกิดรากแขนง (Lateral roots) และรากพิเศษ"
+          },
+          {
+            id: "abscisic-acid",
+            name: "กรดแอบไซซิก (ABA)",
+            role: "สังเคราะห์ที่รากเมื่อสัมผัสสภาวะดินแห้ง แล้วส่งสัญญาณเคมีขึ้นไปเตือนใบให้ปิดปากใบ"
+          }
+        ]
+      }
+    };
+
+    const quizQuestions = [
+      {
+        question: "เมื่อพืชประสบสภาวะขาดน้ำในฤดูแล้ง ฮอร์โมนพืชชนิดใดจะทำหน้าที่สั่งการให้ 'เซลล์คุมปิดปากใบ' เพื่อลดการสูญเสียน้ำ?",
+        options: ["ออกซิน (Auxin)", "ไซโทไคนิน (Cytokinin)", "กรดแอบไซซิก (ABA)", "จิบเบอเรลลิน (GA)"],
+        correct: 2,
+        explanation: "กรดแอบไซซิก (ABA) ถูกสร้างขึ้นที่รากและใบเมื่อพืชขาดน้ำ เพื่อกระตุ้นให้เซลล์คุมปิดปากใบอย่างรวดเร็ว ป้องกันพืชเหี่ยวเฉา"
+      },
+      {
+        question: "เกษตรกรที่ต้องการบ่มกล้วย มะม่วง หรือทุเรียน ให้สุกพร้อมกัน ควรใช้ฮอร์โมนพืชชนิดใด?",
+        options: ["เอทิลีน (Ethylene)", "ออกซิน (Auxin)", "ไซโทไคนิน (Cytokinin)", "จิบเบอเรลลิน (GA)"],
+        correct: 0,
+        explanation: "เอทิลีน (Ethylene) เป็นก๊าซฮอร์โมนที่กระตุ้นกระบวนการสุกของผลไม้ เปลี่ยนแป้งเป็นน้ำตาลและสลายคลอโรฟิลล์"
+      },
+      {
+        question: "หากต้องการเร่งการเกิดรากใหม่ของ 'กิ่งปักชำ' ควรใช้สารสังเคราะห์ของฮอร์โมนใด (เช่น IBA หรือ NAA)?",
+        options: ["จิบเบอเรลลิน (GA)", "ออกซิน (Auxin)", "กรดแอบไซซิก (ABA)", "เอทิลีน (Ethylene)"],
+        correct: 1,
+        explanation: "ออกซิน (Auxin) มีคุณสมบัติกระตุ้นการเกิดรากแขนงและรากพิเศษ จึงนิยมนำสารสังเคราะห์ IBA และ NAA มาใช้เร่งรากกิ่งปักชำ"
+      },
+      {
+        question: "ฮอร์โมนใดนิยมนำมาใช้ฉีดพ่นช่อองุ่นไร้เมล็ด เพื่อขยายขั้วช่อและเพิ่มขนาดของผลองุ่น?",
+        options: ["กรดแอบไซซิก (ABA)", "ไซโทไคนิน (Cytokinin)", "จิบเบอเรลลิน (Gibberellin)", "เอทิลีน (Ethylene)"],
+        correct: 2,
+        explanation: "จิบเบอเรลลิน (GA) กระตุ้นการยืดตัวของเซลล์และการเจริญของผลองุ่นไร้เมล็ด ทำให้ได้ผลองุ่นที่มีขนาดใหญ่และช่อโปร่ง"
+      },
+      {
+        question: "ในการเทคโนโลยีการเพาะเลี้ยงเนื้อเยื่อพืช (Plant Tissue Culture) สัดส่วนของฮอร์โมนใดที่สูงกว่า จะช่วยกระตุ้นการเกิด 'ยอดพืชใหม่'?",
+        options: ["ไซโทไคนิน สูงกว่า ออกซิน", "ออกซิน สูงกว่า ไซโทไคนิน", "กรดแอบไซซิก สูงกว่า จิบเบอเรลลิน", "เอทิลีน สูงกว่า ออกซิน"],
+        correct: 0,
+        explanation: "เมื่อสัดส่วน ไซโทไคนิน : ออกซิน สูง เนื้อเยื่อพืชจะถูกกระตุ้นให้แบ่งเซลล์และเกิดเป็นยอดพืชใหม่"
+      }
+    ];
+
+    let currentTheme = localStorage.getItem('theme') || 'auto';
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    function initTheme() {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      updateThemeIcon();
+    }
+
+    function toggleTheme() {
+      if (currentTheme === 'light') currentTheme = 'dark';
+      else if (currentTheme === 'dark') currentTheme = 'auto';
+      else currentTheme = 'light';
+      
+      localStorage.setItem('theme', currentTheme);
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      const iconContainer = document.getElementById('themeIcon');
+      if (!iconContainer) return;
+      const isDark = currentTheme === 'dark' || 
+        (currentTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+      if (isDark) {
+        iconContainer.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+      } else {
+        iconContainer.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+      }
+    }
+
+    function renderHomeGrid(filter = 'all') {
+      const grid = document.getElementById('hormoneGrid');
+      if (!grid) return;
+
+      const filtered = filter === 'all' 
+        ? hormonesData 
+        : hormonesData.filter(h => h.type === filter);
+
+      grid.innerHTML = filtered.map(h => `
+        <div class="hormone-card" onclick="navigateTo('detail', '${h.id}')" role="button" tabindex="0">
+          <div class="card-header-row">
+            <div class="card-icon-wrapper">${h.icon}</div>
+            <span class="card-tag">${h.typeTh}</span>
+          </div>
+          <div class="card-title-group">
+            <h2 class="card-title-th">${h.nameTh}</h2>
+            <div class="card-title-en">${h.nameEn}</div>
+          </div>
+          <p class="card-teaser">${h.teaser}</p>
+        </div>
+      `).join('');
+    }
+
+    function filterCards(type, chipEl) {
+      document.querySelectorAll('.filter-chip').forEach(el => el.classList.remove('active'));
+      chipEl.classList.add('active');
+      renderHomeGrid(type);
+    }
+
+    function selectPlantPart(partKey) {
+      document.querySelectorAll('.plant-hotspot').forEach(el => el.classList.remove('active'));
+      const activeHs = document.getElementById(`hs-${partKey}`);
+      if (activeHs) activeHs.classList.add('active');
+
+      const data = plantPartsData[partKey];
+      if (!data) return;
+
+      const panel = document.getElementById('partInfoPanel');
+      panel.innerHTML = `
+        <div class="part-header">
+          <h3 class="part-title">${data.title}</h3>
+          <p class="part-desc">${data.subtitle}</p>
+        </div>
+        <div style="font-weight:600; font-size:0.95rem; margin-bottom:1rem; color:var(--accent-green);">
+          ฮอร์โมนพืชที่มีบทบาทในบริเวณนี้:
+        </div>
+        <div class="part-hormones-list">
+          ${data.hormones.map(h => `
+            <div class="hormone-quick-card">
+              <div class="hq-header">
+                <span class="hq-name">🧪 ${h.name}</span>
+              </div>
+              <p class="hq-role">${h.role}</p>
+              <button class="deep-dive-btn" onclick="navigateTo('detail', '${h.id}')">
+                อ่านข้อมูลเจาะลึก ➔
+              </button>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderDetailView(hormoneId) {
+      const hormone = hormonesData.find(h => h.id === hormoneId);
+      if (!hormone) return;
+
+      document.getElementById('detailHeaderCard').innerHTML = `
+        <div class="detail-icon-box">${hormone.icon}</div>
+        <div>
+          <h1 class="detail-title-th">${hormone.nameTh}</h1>
+          <div class="detail-title-en">${hormone.nameEn} • ${hormone.typeTh}</div>
+          <p class="detail-quick-summary">${hormone.teaser}</p>
+        </div>
+      `;
+
+      document.getElementById('productionTags').innerHTML = hormone.productionSites.map(site => `
+        <span class="tag-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          ${site}
+        </span>
+      `).join('');
+
+      document.getElementById('rolesList').innerHTML = hormone.roles.map(r => `
+        <li class="info-item">
+          <span class="info-bullet"></span>
+          <div><span class="info-item-strong">${r.title}:</span> ${r.desc}</div>
+        </li>
+      `).join('');
+
+      document.getElementById('agricultureList').innerHTML = hormone.agricultureUses.map(a => `
+        <li class="info-item">
+          <span class="info-bullet"></span>
+          <div><span class="info-item-strong">${a.title}:</span> ${a.desc}</div>
+        </li>
+      `).join('');
+    }
+
+    function renderCompareTable() {
+      const tbody = document.getElementById('compareTableBody');
+      tbody.innerHTML = hormonesData.map(h => `
+        <tr>
+          <td><strong>${h.nameTh}</strong><br><small style="color:var(--text-muted);">${h.nameEn}</small></td>
+          <td><span class="card-tag">${h.typeTh}</span></td>
+          <td>${h.productionSites[0]}</td>
+          <td>${h.roles[0].title}</td>
+          <td>${h.agricultureUses[0].title}</td>
+        </tr>
+      `).join('');
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      if (currentQuizIndex >= quizQuestions.length) {
+        container.innerHTML = `
+          <div style="text-align:center;">
+            <h2 style="font-size:1.8rem; font-weight:700; margin-bottom:1rem;">🎉 สรุปผลการทดสอบ</h2>
+            <p style="font-size:1.2rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+              คุณทำคะแนนได้ <strong style="color:var(--accent-green); font-size:2rem;">${quizScore}</strong> / ${quizQuestions.length} คะแนน
+            </p>
+            <button class="quiz-next-btn" onclick="resetQuiz()">ทำแบบทดสอบอีกครั้ง</button>
+          </div>
+        `;
+        return;
+      }
+
+      const q = quizQuestions[currentQuizIndex];
+      quizAnswered = false;
+
+      container.innerHTML = `
+        <div class="quiz-progress">ข้อที่ ${currentQuizIndex + 1} จาก ${quizQuestions.length}</div>
+        <div class="quiz-question">${q.question}</div>
+        <div class="quiz-options">
+          ${q.options.map((opt, idx) => `
+            <button class="quiz-option-btn" onclick="checkAnswer(${idx})">${opt}</button>
+          `).join('')}
+        </div>
+        <div id="quizFeedback" class="quiz-feedback" style="display:none;"></div>
+        <div id="quizNextWrapper" style="display:none; text-align:right;">
+          <button class="quiz-next-btn" onclick="nextQuestion()">คำถามถัดไป →</button>
+        </div>
+      `;
+    }
+
+    function checkAnswer(selectedIdx) {
+      if (quizAnswered) return;
+      quizAnswered = true;
+
+      const q = quizQuestions[currentQuizIndex];
+      const buttons = document.querySelectorAll('.quiz-option-btn');
+      const feedback = document.getElementById('quizFeedback');
+      const nextWrapper = document.getElementById('quizNextWrapper');
+
+      if (selectedIdx === q.correct) {
+        quizScore++;
+        buttons[selectedIdx].classList.add('correct');
+        feedback.className = 'quiz-feedback correct-bg';
+        feedback.innerHTML = `<strong>ถูกต้อง!</strong> ${q.explanation}`;
+      } else {
+        buttons[selectedIdx].classList.add('incorrect');
+        buttons[q.correct].classList.add('correct');
+        feedback.className = 'quiz-feedback incorrect-bg';
+        feedback.innerHTML = `<strong>ยังไม่ถูกต้อง</strong> ${q.explanation}`;
+      }
+
+      feedback.style.display = 'block';
+      nextWrapper.style.display = 'block';
+    }
+
+    function nextQuestion() {
+      currentQuizIndex++;
+      renderQuiz();
+    }
+
+    function resetQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      renderQuiz();
+    }
+
+    function navigateTo(targetView, hormoneId = null) {
+      const views = {
+        home: document.getElementById('home-view'),
+        grid: document.getElementById('grid-view'),
+        detail: document.getElementById('detail-view'),
+        compare: document.getElementById('compare-view'),
+        quiz: document.getElementById('quiz-view')
+      };
+
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+
+      if (targetView === 'detail' && hormoneId) {
+        window.location.hash = hormoneId;
+        renderDetailView(hormoneId);
+        switchView(views.detail);
+      } else if (targetView === 'grid') {
+        window.location.hash = 'all';
+        document.getElementById('navAllBtn').classList.add('active');
+        renderHomeGrid();
+        switchView(views.grid);
+      } else if (targetView === 'compare') {
+        window.location.hash = 'compare';
+        document.getElementById('navCompareBtn').classList.add('active');
+        renderCompareTable();
+        switchView(views.compare);
+      } else if (targetView === 'quiz') {
+        window.location.hash = 'quiz';
+        document.getElementById('navQuizBtn').classList.add('active');
+        renderQuiz();
+        switchView(views.quiz);
+      } else {
+        window.location.hash = '';
+        document.getElementById('navHomeBtn').classList.add('active');
+        selectPlantPart('shoot');
+        switchView(views.home);
+      }
+    }
+
+    function switchView(targetEl) {
+      document.querySelectorAll('.view').forEach(el => {
+        if (el !== targetEl && !el.classList.contains('view-hidden')) {
+          el.classList.add('view-leaving');
+          setTimeout(() => {
+            el.classList.remove('view-active', 'view-leaving');
+            el.classList.add('view-hidden');
+          }, 200);
+        }
+      });
+
+      setTimeout(() => {
+        targetEl.classList.remove('view-hidden');
+        targetEl.classList.add('view-active', 'view-entering');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+          targetEl.classList.remove('view-entering');
+        }, 380);
+      }, 200);
+    }
+
+    function handleHashChange() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'all') navigateTo('grid');
+      else if (hash === 'compare') navigateTo('compare');
+      else if (hash === 'quiz') navigateTo('quiz');
+      else if (hash && hormonesData.some(h => h.id === hash)) navigateTo('detail', hash);
+      else navigateTo('home');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && window.location.hash) navigateTo('home');
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      selectPlantPart('shoot');
+      handleHashChange();
+
+      document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+      window.addEventListener('hashchange', handleHashChange);
+    });
+  </script>
+</body>
+</html>

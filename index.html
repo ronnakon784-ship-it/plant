@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ฮอร์โมนพืช (Plant Hormones) | ผังปฏิสัมพันธ์สรีรวิทยาของพืช</title>
+  <title>ฮอร์โมนพืช (Plant Hormones) | มินิมอลสรีรวิทยาของพืช</title>
   
   <!-- Google Fonts: Prompt & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,26 +12,26 @@
   
   <style>
     /* ==========================================
-       CSS VARIABLES & THEME DEFINITIONS
+       ULTRA-CLEAN MINIMALIST THEME DEFINITIONS
        ========================================== */
     :root {
-      /* Light Theme Colors */
-      --bg-body: #f7f9f6;
+      /* Clean Light Theme Palette */
+      --bg-body: #fafbf9;
       --bg-card: #ffffff;
       --bg-card-hover: #ffffff;
-      --bg-tag: #edf4ee;
-      --text-primary: #1b261e;
-      --text-secondary: #4a5d4f;
-      --text-muted: #788c7d;
-      --accent-green: #2e7d32;
-      --accent-green-hover: #236327;
-      --accent-soft: #e8f5e9;
-      --accent-light: #f1f8f3;
-      --border-color: #e2e9e3;
-      --border-subtle: #edf2ee;
-      --shadow-sm: 0 2px 8px rgba(27, 38, 30, 0.04);
-      --shadow-md: 0 10px 30px rgba(27, 38, 30, 0.07);
-      --shadow-lg: 0 20px 40px rgba(27, 38, 30, 0.1);
+      --bg-tag: #f0f4f1;
+      --text-primary: #18221b;
+      --text-secondary: #4a5a4e;
+      --text-muted: #829285;
+      --accent-green: #306342;
+      --accent-green-hover: #224930;
+      --accent-soft: #eaf2ec;
+      --accent-light: #f3f7f4;
+      --border-color: #e5ebe6;
+      --border-subtle: #f0f4f1;
+      --shadow-sm: 0 4px 16px rgba(24, 34, 27, 0.03);
+      --shadow-md: 0 12px 32px rgba(24, 34, 27, 0.06);
+      --shadow-lg: 0 24px 48px rgba(24, 34, 27, 0.09);
       
       /* Typography */
       --font-th: 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -49,65 +49,65 @@
       --transition-slow: 0.5s var(--ease-spring);
     }
 
-    /* Dark Theme Colors */
+    /* Clean Dark Theme Palette */
     @media (prefers-color-scheme: dark) {
       :root[data-theme="auto"], :root[data-theme="dark"] {
-        --bg-body: #0d120f;
-        --bg-card: #151d18;
-        --bg-card-hover: #1c2620;
-        --bg-tag: #1c2a1f;
-        --text-primary: #e6eee8;
-        --text-secondary: #9cb1a2;
-        --text-muted: #64786a;
-        --accent-green: #4caf50;
-        --accent-green-hover: #66bb6a;
-        --accent-soft: #1d3324;
-        --accent-light: #233b2a;
-        --border-color: #223026;
-        --border-subtle: #19241c;
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-        --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
-        --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+        --bg-body: #0b100c;
+        --bg-card: #121814;
+        --bg-card-hover: #17201b;
+        --bg-tag: #17251b;
+        --text-primary: #e8f0ea;
+        --text-secondary: #9cb0a1;
+        --text-muted: #647869;
+        --accent-green: #48a568;
+        --accent-green-hover: #5db97c;
+        --accent-soft: #192d20;
+        --accent-light: #203628;
+        --border-color: #1e2b21;
+        --border-subtle: #162018;
+        --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
+        --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 28px 56px rgba(0, 0, 0, 0.55);
       }
     }
 
     /* Manual Overrides */
     :root[data-theme="light"] {
-      --bg-body: #f7f9f6;
+      --bg-body: #fafbf9;
       --bg-card: #ffffff;
       --bg-card-hover: #ffffff;
-      --bg-tag: #edf4ee;
-      --text-primary: #1b261e;
-      --text-secondary: #4a5d4f;
-      --text-muted: #788c7d;
-      --accent-green: #2e7d32;
-      --accent-green-hover: #236327;
-      --accent-soft: #e8f5e9;
-      --accent-light: #f1f8f3;
-      --border-color: #e2e9e3;
-      --border-subtle: #edf2ee;
-      --shadow-sm: 0 2px 8px rgba(27, 38, 30, 0.04);
-      --shadow-md: 0 10px 30px rgba(27, 38, 30, 0.07);
-      --shadow-lg: 0 20px 40px rgba(27, 38, 30, 0.1);
+      --bg-tag: #f0f4f1;
+      --text-primary: #18221b;
+      --text-secondary: #4a5a4e;
+      --text-muted: #829285;
+      --accent-green: #306342;
+      --accent-green-hover: #224930;
+      --accent-soft: #eaf2ec;
+      --accent-light: #f3f7f4;
+      --border-color: #e5ebe6;
+      --border-subtle: #f0f4f1;
+      --shadow-sm: 0 4px 16px rgba(24, 34, 27, 0.03);
+      --shadow-md: 0 12px 32px rgba(24, 34, 27, 0.06);
+      --shadow-lg: 0 24px 48px rgba(24, 34, 27, 0.09);
     }
 
     :root[data-theme="dark"] {
-      --bg-body: #0d120f;
-      --bg-card: #151d18;
-      --bg-card-hover: #1c2620;
-      --bg-tag: #1c2a1f;
-      --text-primary: #e6eee8;
-      --text-secondary: #9cb1a2;
-      --text-muted: #64786a;
-      --accent-green: #4caf50;
-      --accent-green-hover: #66bb6a;
-      --accent-soft: #1d3324;
-      --accent-light: #233b2a;
-      --border-color: #223026;
-      --border-subtle: #19241c;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
-      --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+      --bg-body: #0b100c;
+      --bg-card: #121814;
+      --bg-card-hover: #17201b;
+      --bg-tag: #17251b;
+      --text-primary: #e8f0ea;
+      --text-secondary: #9cb0a1;
+      --text-muted: #647869;
+      --accent-green: #48a568;
+      --accent-green-hover: #5db97c;
+      --accent-soft: #192d20;
+      --accent-light: #203628;
+      --border-color: #1e2b21;
+      --border-subtle: #162018;
+      --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 28px 56px rgba(0, 0, 0, 0.55);
     }
 
     /* Reset */
@@ -143,16 +143,16 @@
       width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.75rem;
     }
 
-    /* Header */
+    /* Site Header */
     .site-header {
       padding: 1.5rem 0;
       border-bottom: 1px solid var(--border-subtle);
-      background-color: rgba(247, 249, 246, 0.88);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(250, 251, 249, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -160,12 +160,12 @@
     }
 
     [data-theme="dark"] .site-header {
-      background-color: rgba(13, 18, 15, 0.88);
+      background-color: rgba(11, 16, 12, 0.9);
     }
 
     @media (prefers-color-scheme: dark) {
       [data-theme="auto"] .site-header {
-        background-color: rgba(13, 18, 15, 0.88);
+        background-color: rgba(11, 16, 12, 0.9);
       }
     }
 
@@ -186,8 +186,8 @@
     }
 
     .brand-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       background: var(--accent-soft);
       display: flex;
@@ -202,24 +202,25 @@
     }
 
     .brand-text-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      line-height: 1.2;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
     }
 
     .brand-text-sub {
-      font-size: 0.72rem;
+      font-size: 0.73rem;
       color: var(--text-muted);
       font-family: var(--font-en);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       flex-wrap: wrap;
     }
 
@@ -227,15 +228,15 @@
       background: transparent;
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
-      padding: 0.5rem 0.95rem;
+      padding: 0.55rem 1.1rem;
       border-radius: var(--radius-pill);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 500;
       font-family: var(--font-th);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       transition: all var(--transition-fast);
     }
 
@@ -249,8 +250,8 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: var(--radius-pill);
       display: flex;
       align-items: center;
@@ -269,10 +270,11 @@
 
     .main-content {
       flex: 1;
-      padding: 2.5rem 0 5rem 0;
+      padding: 3rem 0 6rem 0;
       position: relative;
     }
 
+    /* Views & Animation */
     .view {
       width: 100%;
       transition: opacity 0.35s var(--ease-spring), transform 0.35s var(--ease-spring);
@@ -285,7 +287,7 @@
     }
 
     .view-entering {
-      animation: viewSlideIn 0.38s var(--ease-spring) forwards;
+      animation: viewSlideIn 0.4s var(--ease-spring) forwards;
     }
 
     .view-leaving {
@@ -293,7 +295,7 @@
     }
 
     @keyframes viewSlideIn {
-      from { opacity: 0; transform: translateY(16px) scale(0.985); }
+      from { opacity: 0; transform: translateY(18px) scale(0.985); }
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
@@ -306,14 +308,14 @@
     .hero-section {
       text-align: center;
       max-width: 760px;
-      margin: 0 auto 2.5rem auto;
+      margin: 0 auto 3rem auto;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.35rem 0.95rem;
+      padding: 0.4rem 1rem;
       background: var(--accent-soft);
       color: var(--accent-green);
       font-size: 0.82rem;
@@ -330,11 +332,11 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-size: clamp(2.1rem, 4vw, 2.85rem);
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.25;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
       margin-bottom: 1rem;
     }
 
@@ -342,28 +344,29 @@
       font-size: 1.05rem;
       color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    /* Interactive Plant Diagram Layout */
+    /* REALISTIC PLANT DIAGRAM MAIN LAYOUT */
     .plant-main-layout {
       display: grid;
-      grid-template-columns: 4.5fr 7.5fr;
-      gap: 2rem;
+      grid-template-columns: 5fr 7fr;
+      gap: 2.25rem;
       align-items: start;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 920px) {
       .plant-main-layout {
         grid-template-columns: 1fr;
       }
     }
 
+    /* Clean Card Container for Realistic Plant */
     .plant-svg-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -373,22 +376,26 @@
 
     .plant-svg {
       width: 100%;
-      max-width: 340px;
+      max-width: 380px;
       height: auto;
+      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.06));
     }
 
+    /* Realistic Hotspot Node Styling */
     .plant-hotspot {
       cursor: pointer;
-      transition: transform var(--transition-fast);
+      transition: all var(--transition-fast);
     }
 
     .plant-hotspot circle.pulse {
-      animation: hotspotPulse 2s infinite;
+      animation: hotspotPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     }
 
     .plant-hotspot:hover circle.core, .plant-hotspot.active circle.core {
       fill: var(--accent-green);
       r: 10;
+      stroke: #ffffff;
+      stroke-width: 3;
     }
 
     .plant-hotspot:hover text, .plant-hotspot.active text {
@@ -397,31 +404,33 @@
     }
 
     @keyframes hotspotPulse {
-      0% { r: 6; opacity: 0.8; stroke-width: 2; }
-      100% { r: 22; opacity: 0; stroke-width: 1; }
+      0% { r: 7; opacity: 0.9; stroke-width: 2; }
+      100% { r: 24; opacity: 0; stroke-width: 1; }
     }
 
+    /* Dynamic Part Info Card */
     .plant-info-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 2.25rem 2rem;
+      padding: 2.5rem 2.25rem;
       box-shadow: var(--shadow-sm);
     }
 
     .part-header {
-      margin-bottom: 1.25rem;
-      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .part-title {
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: var(--text-primary);
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .part-desc {
@@ -429,6 +438,7 @@
       color: var(--text-secondary);
       margin-top: 0.5rem;
       font-weight: 300;
+      line-height: 1.65;
     }
 
     .part-hormones-list {
@@ -467,7 +477,7 @@
     .hq-tag {
       font-size: 0.75rem;
       font-weight: 500;
-      padding: 0.2rem 0.65rem;
+      padding: 0.25rem 0.7rem;
       background: var(--bg-tag);
       color: var(--accent-green);
       border-radius: var(--radius-pill);
@@ -476,15 +486,16 @@
     .hq-role {
       font-size: 0.94rem;
       color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 1rem;
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+      font-weight: 300;
     }
 
     .deep-dive-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.55rem 1.1rem;
+      gap: 0.55rem;
+      padding: 0.6rem 1.25rem;
       background: var(--accent-green);
       color: #ffffff;
       border: none;
@@ -494,7 +505,6 @@
       font-weight: 500;
       cursor: pointer;
       transition: all var(--transition-fast);
-      text-decoration: none;
     }
 
     .deep-dive-btn:hover {
@@ -502,12 +512,12 @@
       transform: translateX(4px);
     }
 
-    /* Hormone Grid View */
+    /* All Cards Grid View */
     .filter-bar {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 0.65rem;
       margin-bottom: 2.5rem;
     }
 
@@ -515,7 +525,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-secondary);
-      padding: 0.5rem 1.1rem;
+      padding: 0.55rem 1.25rem;
       border-radius: var(--radius-pill);
       font-size: 0.88rem;
       font-weight: 500;
@@ -542,7 +552,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 2rem 1.75rem;
+      padding: 2.25rem 1.85rem;
       display: flex;
       flex-direction: column;
       cursor: pointer;
@@ -584,8 +594,8 @@
     }
 
     .card-icon-wrapper {
-      width: 56px;
-      height: 56px;
+      width: 58px;
+      height: 58px;
       border-radius: var(--radius-sm);
       background: var(--accent-soft);
       color: var(--accent-green);
@@ -613,7 +623,7 @@
     }
 
     .card-title-th {
-      font-size: 1.35rem;
+      font-size: 1.38rem;
       font-weight: 600;
       color: var(--text-primary);
     }
@@ -627,22 +637,22 @@
     }
 
     .card-teaser {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       color: var(--text-secondary);
-      line-height: 1.55;
+      line-height: 1.6;
       font-weight: 300;
     }
 
     /* Detail View Components */
     .detail-nav {
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
     }
 
     .back-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      padding: 0.6rem 1.2rem;
+      padding: 0.65rem 1.35rem;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-pill);
@@ -666,7 +676,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 2.5rem 2rem;
+      padding: 2.75rem 2.25rem;
       margin-bottom: 2.25rem;
       display: flex;
       align-items: center;
@@ -683,9 +693,9 @@
     }
 
     .detail-icon-box {
-      width: 88px;
-      height: 88px;
-      border-radius: 22px;
+      width: 92px;
+      height: 92px;
+      border-radius: 24px;
       background: var(--accent-soft);
       color: var(--accent-green);
       display: flex;
@@ -695,12 +705,12 @@
     }
 
     .detail-icon-box svg {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
     }
 
     .detail-title-th {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.2;
@@ -716,7 +726,7 @@
 
     .detail-quick-summary {
       margin-top: 0.6rem;
-      font-size: 1rem;
+      font-size: 1.02rem;
       color: var(--text-secondary);
       font-weight: 300;
     }
@@ -724,14 +734,14 @@
     .detail-sections-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     .detail-section-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 2rem;
+      padding: 2.25rem 2rem;
       box-shadow: var(--shadow-sm);
     }
 
@@ -746,14 +756,14 @@
       display: flex;
       align-items: center;
       gap: 0.85rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.35rem;
       padding-bottom: 0.85rem;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .section-icon-badge {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
       background: var(--accent-soft);
       color: var(--accent-green);
@@ -764,7 +774,7 @@
     }
 
     .section-title {
-      font-size: 1.2rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: var(--text-primary);
     }
@@ -773,16 +783,16 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 1rem;
     }
 
     .info-item {
       display: flex;
       align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.96rem;
+      gap: 0.8rem;
+      font-size: 0.98rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .info-bullet {
@@ -802,7 +812,7 @@
     .tag-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
+      gap: 0.75rem;
     }
 
     .tag-pill {
@@ -810,15 +820,15 @@
       color: var(--accent-green);
       font-size: 0.88rem;
       font-weight: 500;
-      padding: 0.45rem 1rem;
+      padding: 0.5rem 1.1rem;
       border-radius: var(--radius-pill);
       border: 1px solid var(--border-color);
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
     }
 
-    /* Comparison Table View */
+    /* Table View */
     .table-wrapper {
       overflow-x: auto;
       background: var(--bg-card);
@@ -835,7 +845,7 @@
     }
 
     .compare-table th, .compare-table td {
-      padding: 1.1rem 1.25rem;
+      padding: 1.15rem 1.35rem;
       border-bottom: 1px solid var(--border-subtle);
     }
 
@@ -850,13 +860,13 @@
       background: var(--accent-light);
     }
 
-    /* Interactive Quiz View */
+    /* Quiz View */
     .quiz-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 2.5rem 2rem;
-      max-width: 680px;
+      padding: 2.75rem 2.25rem;
+      max-width: 700px;
       margin: 0 auto;
       box-shadow: var(--shadow-md);
     }
@@ -869,27 +879,28 @@
     }
 
     .quiz-question {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--text-primary);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
+      line-height: 1.5;
     }
 
     .quiz-options {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
     }
 
     .quiz-option-btn {
       background: var(--bg-body);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
-      padding: 1rem 1.25rem;
+      padding: 1.1rem 1.35rem;
       border-radius: var(--radius-sm);
       font-family: var(--font-th);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       text-align: left;
       cursor: pointer;
       transition: all var(--transition-fast);
@@ -914,11 +925,11 @@
     }
 
     .quiz-feedback {
-      padding: 1rem;
+      padding: 1.1rem;
       border-radius: var(--radius-sm);
-      margin-bottom: 1.5rem;
-      font-size: 0.92rem;
-      line-height: 1.5;
+      margin-bottom: 1.75rem;
+      font-size: 0.94rem;
+      line-height: 1.6;
     }
 
     .quiz-feedback.correct-bg {
@@ -935,7 +946,7 @@
       background: var(--accent-green);
       color: #ffffff;
       border: none;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1.65rem;
       border-radius: var(--radius-pill);
       font-family: var(--font-th);
       font-weight: 600;
@@ -949,7 +960,7 @@
 
     /* Footer */
     .site-footer {
-      padding: 2.5rem 0;
+      padding: 2.75rem 0;
       border-top: 1px solid var(--border-subtle);
       text-align: center;
       font-size: 0.85rem;
@@ -961,7 +972,7 @@
 <body>
 
   <!-- ==========================================
-       HEADER
+       SITE HEADER
        ========================================== -->
   <header class="site-header">
     <div class="container header-nav">
@@ -974,7 +985,7 @@
         </div>
         <div>
           <div class="brand-text-title">ฮอร์โมนพืช</div>
-          <div class="brand-text-sub">Plant Hormones</div>
+          <div class="brand-text-sub">Plant Physiology</div>
         </div>
       </div>
 
@@ -1003,97 +1014,157 @@
   </header>
 
   <!-- ==========================================
-       MAIN CONTENT
+       MAIN CONTENT CONTAINER
        ========================================== -->
   <main class="main-content">
     <div class="container">
       
-      <!-- 1. MAIN HOME VIEW: INTERACTIVE PLANT DIAGRAM -->
+      <!-- 1. PRIMARY HOME VIEW: REALISTIC BOTANICAL TREE DIAGRAM -->
       <section id="home-view" class="view view-active">
         <div class="hero-section">
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
-            สรีรวิทยาของพืช (Plant Physiology)
+            ผังปฏิสัมพันธ์สรีรวิทยาของพืช (Interactive Plant Anatomy)
           </div>
           <h1 class="hero-title">ผังตำแหน่งฮอร์โมนบนต้นไม้</h1>
           <p class="hero-subtitle">
-            กดเลือกบริเวณต่างๆ บนต้นไม้ เพื่อดูสรุปฮอร์โมนที่ทำงาน ณ จุดนั้น 
-            และกดปุ่มเพื่อเข้าไปอ่าน <strong>"ข้อมูลเจาะลึก"</strong> ของฮอร์โมนแต่ละชนิด
+            กดเลือกบริเวณต่างๆ บนต้นไม้ เพื่อดูสรุปฮอร์โมนพืชที่ทำงาน ณ จุดนั้น 
+            และกดปุ่มเพื่อเข้าสู่ <strong>"หน้าข้อมูลเจาะลึก"</strong> ของฮอร์โมนแต่ละชนิด
           </p>
         </div>
 
         <div class="plant-main-layout">
-          <!-- Interactive Vector Plant Diagram -->
+          <!-- Realistic Aesthetic Botanical Tree SVG Illustration -->
           <div class="plant-svg-card">
-            <svg class="plant-svg" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Soil Line & Ground -->
-              <rect x="20" y="360" width="360" height="100" rx="10" fill="#2d221a" opacity="0.15"/>
-              <line x1="30" y1="360" x2="370" y2="360" stroke="#795548" stroke-width="3" stroke-dasharray="6 4"/>
+            <svg class="plant-svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Realistic Trunk & Branch Bark Gradient -->
+                <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#4a3728"/>
+                  <stop offset="35%" stop-color="#6d543e"/>
+                  <stop offset="70%" stop-color="#543e2e"/>
+                  <stop offset="100%" stop-color="#34251a"/>
+                </linearGradient>
 
-              <!-- Main Stem / Trunk -->
-              <path d="M200 360 Q195 240 200 100" stroke="#4ea355" stroke-width="14" stroke-linecap="round"/>
-              <path d="M200 360 Q195 240 200 100" stroke="#2e7d32" stroke-width="6" stroke-linecap="round"/>
+                <!-- Realistic Leaf Gradient 1 -->
+                <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#69c775"/>
+                  <stop offset="50%" stop-color="#3b9649"/>
+                  <stop offset="100%" stop-color="#23602d"/>
+                </linearGradient>
 
-              <!-- Branches -->
-              <path d="M198 260 Q140 230 110 200" stroke="#4ea355" stroke-width="8" stroke-linecap="round"/>
-              <path d="M202 210 Q260 180 290 150" stroke="#4ea355" stroke-width="8" stroke-linecap="round"/>
-              <path d="M199 150 Q150 120 120 90" stroke="#4ea355" stroke-width="6" stroke-linecap="round"/>
+                <!-- Realistic Leaf Gradient 2 -->
+                <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8cd997"/>
+                  <stop offset="60%" stop-color="#4ea359"/>
+                  <stop offset="100%" stop-color="#296b34"/>
+                </linearGradient>
 
-              <!-- Leaves -->
-              <path d="M120 90 C90 70 70 90 90 120 C110 110 125 100 120 90Z" fill="#66bb6a"/>
-              <path d="M110 200 C70 180 50 210 80 240 C100 230 115 210 110 200Z" fill="#4caf50"/>
-              <path d="M290 150 C330 130 350 160 320 190 C300 180 285 160 290 150Z" fill="#4caf50"/>
+                <!-- Realistic Fruit Radial Gradient -->
+                <radialGradient id="fruitGrad" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#ff8a80"/>
+                  <stop offset="40%" stop-color="#e53935"/>
+                  <stop offset="85%" stop-color="#b71c1c"/>
+                  <stop offset="100%" stop-color="#7f0000"/>
+                </radialGradient>
 
-              <!-- Fruit -->
-              <circle cx="280" cy="220" r="18" fill="#e53935"/>
-              <path d="M280 202 Q285 195 288 190" stroke="#5d4037" stroke-width="3"/>
-              <path d="M285 192 C292 190 295 196 290 200Z" fill="#4caf50"/>
+                <!-- Soft Soil Gradient -->
+                <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#8d6e63" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#4e342e" stop-opacity="0.25"/>
+                </linearGradient>
+              </defs>
 
-              <!-- Root System -->
-              <path d="M200 360 Q180 400 150 440" stroke="#8d6e63" stroke-width="7" stroke-linecap="round"/>
-              <path d="M200 360 Q220 410 250 450" stroke="#8d6e63" stroke-width="7" stroke-linecap="round"/>
-              <path d="M200 360 Q200 420 200 465" stroke="#8d6e63" stroke-width="5" stroke-linecap="round"/>
-              <path d="M175 400 Q140 410 120 420" stroke="#a1887f" stroke-width="4" stroke-linecap="round"/>
-              <path d="M215 410 Q245 425 270 435" stroke="#a1887f" stroke-width="4" stroke-linecap="round"/>
+              <!-- Soil Line & Underground Atmosphere -->
+              <rect x="20" y="380" width="360" height="95" rx="12" fill="url(#soilGrad)"/>
+              <path d="M20 380 Q100 376 200 380 T380 380" stroke="#795548" stroke-width="2.5" stroke-dasharray="8 5"/>
+
+              <!-- Organic Underground Roots -->
+              <!-- Main Tap Root -->
+              <path d="M200 380 Q196 415 198 470" stroke="#6d4c41" stroke-width="7" stroke-linecap="round"/>
+              <path d="M198 470 Q197 482 196 490" stroke="#5d4037" stroke-width="4" stroke-linecap="round"/>
+              
+              <!-- Side Roots -->
+              <path d="M199 395 Q160 415 125 440" stroke="#795548" stroke-width="5" stroke-linecap="round"/>
+              <path d="M199 410 Q240 430 275 450" stroke="#795548" stroke-width="5" stroke-linecap="round"/>
+              <path d="M160 415 Q135 435 105 445" stroke="#8d6e63" stroke-width="3" stroke-linecap="round"/>
+              <path d="M240 430 Q270 450 295 460" stroke="#8d6e63" stroke-width="3" stroke-linecap="round"/>
+              <path d="M198 430 Q170 455 145 475" stroke="#8d6e63" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M198 440 Q225 465 245 480" stroke="#8d6e63" stroke-width="3.5" stroke-linecap="round"/>
+
+              <!-- Main Trunk with Natural Organic Taper -->
+              <path d="M185 380 L190 270 L194 170 L197 90 L203 90 L206 170 L210 270 L215 380 Z" fill="url(#trunkGrad)"/>
+              <path d="M196 380 Q198 270 200 90" stroke="#8d6e63" stroke-width="1.5" opacity="0.4"/>
+
+              <!-- Primary Branches -->
+              <!-- Left Branch Low -->
+              <path d="M192 280 C150 260 120 230 90 210 C85 207 105 210 125 225 C155 245 190 265 193 270 Z" fill="url(#trunkGrad)"/>
+              <!-- Right Branch Low -->
+              <path d="M208 240 C250 225 285 195 315 160 C310 162 280 185 245 210 C215 230 207 235 206 238 Z" fill="url(#trunkGrad)"/>
+              <!-- Left Branch High -->
+              <path d="M195 180 C155 155 130 130 100 100 C105 105 132 132 165 152 C185 165 194 172 194 175 Z" fill="url(#trunkGrad)"/>
+
+              <!-- Foliage / Botanical Leaves Clusters -->
+              <!-- Top Apical Bud Foliage -->
+              <path d="M200 90 C175 60 160 30 200 15 C240 30 225 60 200 90Z" fill="url(#leafGrad1)"/>
+              <path d="M200 90 C185 68 175 42 200 25 C225 42 215 68 200 90Z" fill="url(#leafGrad2)" opacity="0.8"/>
+              <path d="M200 90 L200 25" stroke="#a5d6a7" stroke-width="1.5"/>
+
+              <!-- Left High Foliage -->
+              <path d="M100 100 C70 80 50 110 80 140 C110 130 125 110 100 100Z" fill="url(#leafGrad1)"/>
+              <path d="M100 100 Q80 115 80 140" stroke="#81c784" stroke-width="1.2"/>
+
+              <!-- Left Low Foliage Cluster -->
+              <path d="M90 210 C50 190 30 225 70 255 C110 240 120 220 90 210Z" fill="url(#leafGrad2)"/>
+              <path d="M90 210 Q65 230 70 255" stroke="#81c784" stroke-width="1.2"/>
+
+              <!-- Right Foliage Cluster -->
+              <path d="M315 160 C355 140 375 175 340 205 C310 195 295 175 315 160Z" fill="url(#leafGrad1)"/>
+              <path d="M315 160 Q340 180 340 205" stroke="#81c784" stroke-width="1.2"/>
+
+              <!-- Realistic Apple / Fruit -->
+              <circle cx="310" cy="225" r="20" fill="url(#fruitGrad)"/>
+              <path d="M310 205 Q314 196 317 190" stroke="#4e342e" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M315 192 C324 188 328 195 322 200Z" fill="#4caf50"/>
 
               <!-- HOTSPOT 1: SHOOT TIP -->
               <g class="plant-hotspot active" id="hs-shoot" onclick="selectPlantPart('shoot')">
-                <circle class="pulse" cx="200" cy="95" r="14" fill="#2e7d32"/>
-                <circle class="core" cx="200" cy="95" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
-                <text x="220" y="90" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">1. ปลายยอด (Shoot Tip)</text>
+                <circle class="pulse" cx="200" cy="40" r="14" fill="#306342"/>
+                <circle class="core" cx="200" cy="40" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="222" y="45" fill="#306342" font-size="14" font-weight="600" font-family="Prompt">1. ปลายยอด (Shoot Tip)</text>
               </g>
 
               <!-- HOTSPOT 2: LEAVES -->
               <g class="plant-hotspot" id="hs-leaves" onclick="selectPlantPart('leaves')">
-                <circle class="pulse" cx="100" cy="210" r="14" fill="#2e7d32"/>
-                <circle class="core" cx="100" cy="210" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
-                <text x="15" y="250" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">2. ใบและปากใบ</text>
+                <circle class="pulse" cx="80" cy="225" r="14" fill="#306342"/>
+                <circle class="core" cx="80" cy="225" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="15" y="270" fill="#306342" font-size="14" font-weight="600" font-family="Prompt">2. ใบและปากใบ</text>
               </g>
 
               <!-- HOTSPOT 3: STEM -->
               <g class="plant-hotspot" id="hs-stem" onclick="selectPlantPart('stem')">
-                <circle class="pulse" cx="200" cy="270" r="14" fill="#2e7d32"/>
-                <circle class="core" cx="200" cy="270" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2"/>
-                <text x="218" y="275" fill="#2e7d32" font-size="14" font-weight="600" font-family="Prompt">3. ลำต้น & ข้อปล้อง</text>
+                <circle class="pulse" cx="200" cy="275" r="14" fill="#306342"/>
+                <circle class="core" cx="200" cy="275" r="7" fill="#81c784" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="220" y="280" fill="#306342" font-size="14" font-weight="600" font-family="Prompt">3. ลำต้น & ข้อปล้อง</text>
               </g>
 
               <!-- HOTSPOT 4: FRUIT -->
               <g class="plant-hotspot" id="hs-fruit" onclick="selectPlantPart('fruit')">
-                <circle class="pulse" cx="280" cy="220" r="14" fill="#e53935"/>
-                <circle class="core" cx="280" cy="220" r="7" fill="#ef5350" stroke="#ffffff" stroke-width="2"/>
-                <text x="305" y="225" fill="#d32f2f" font-size="14" font-weight="600" font-family="Prompt">4. ดอกและผล</text>
+                <circle class="pulse" cx="310" cy="225" r="14" fill="#e53935"/>
+                <circle class="core" cx="310" cy="225" r="7" fill="#ef5350" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="325" y="260" fill="#c62828" font-size="14" font-weight="600" font-family="Prompt">4. ดอกและผล</text>
               </g>
 
               <!-- HOTSPOT 5: ROOTS -->
               <g class="plant-hotspot" id="hs-roots" onclick="selectPlantPart('roots')">
-                <circle class="pulse" cx="200" cy="420" r="14" fill="#795548"/>
-                <circle class="core" cx="200" cy="420" r="7" fill="#bcaaa4" stroke="#ffffff" stroke-width="2"/>
-                <text x="220" y="425" fill="#5d4037" font-size="14" font-weight="600" font-family="Prompt">5. ปลายราก (Root Tip)</text>
+                <circle class="pulse" cx="200" cy="435" r="14" fill="#6d4c41"/>
+                <circle class="core" cx="200" cy="435" r="7" fill="#bcaaa4" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="220" y="440" fill="#4e342e" font-size="14" font-weight="600" font-family="Prompt">5. ปลายราก (Root Tip)</text>
               </g>
             </svg>
           </div>
 
-          <!-- Dynamic Overview & Deep-Dive Trigger Panel -->
+          <!-- Dynamic Part Info Card -->
           <div id="partInfoPanel" class="plant-info-card">
             <!-- Rendered dynamically -->
           </div>
@@ -1212,7 +1283,7 @@
   </footer>
 
   <!-- ==========================================
-       JAVASCRIPT
+       JAVASCRIPT APP LOGIC & DATA
        ========================================== -->
   <script>
     const hormonesData = [
